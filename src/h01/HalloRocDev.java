@@ -1,11 +1,20 @@
-package h01;
+import java.awt.*;
+import java.applet.*;
 
-/**
- * Created by piet on 31-08-16.
- */
-public class HalloRocDev {
+public class HalloRocDev extends Applet {
 
-    public static void main(String[] args) {
-        System.out.println("Hallo ro!");
+    public void init() {
+    }
+
+    public void paint(Graphics g) {
+        setBackground(Color.white);
+        g.drawLine(300,300,100,300);
+        g.drawLine(100,300,100,200);
+        g.setColor(Color.black);
+        g.fillRect(110,280,10,20);
+        g.fillRect(130,260,10,40);
+        g.fillRect(150,250,10,50);
+        g.drawString("40 -",80,285);
+        g.drawString("80 -",80,265);
     }
 }
