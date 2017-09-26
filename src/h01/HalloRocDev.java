@@ -13,8 +13,9 @@ public class HalloRocDev extends Applet {
         g.setColor(Color.black);
         g.fillRect(110,280,10,20);
         g.fillRect(130,260,10,40);
-        g.fillRect(150,250,10,50);
+        g.fillRect(150,230,10,70);
         g.drawString("40 -",80,285);
         g.drawString("80 -",80,265);
+        g.drawString("100 -",75,235);
     }
 }
