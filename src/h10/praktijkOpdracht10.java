@@ -5,16 +5,16 @@ import java.applet.*;
 import java.awt.event.*;
 
 
-public class opdracht10 extends Applet {
+public class praktijkOpdracht10 extends Applet {
 
     TextField tekstvak;
     Label label;
     String s, tekst;
-    int dag;
+    int cijfer;
 
     public void init() {
         tekstvak = new TextField("", 20);
-        label = new Label("Type het dagnummer en druk op enter");
+        label = new Label("Type een cijfer en druk op enter");
         tekstvak.addActionListener( new TekstvakListener() );
         tekst = "";
         add(label);
@@ -28,31 +28,30 @@ public class opdracht10 extends Applet {
     class TekstvakListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
             s = tekstvak.getText();
-            dag = Integer.parseInt( s);
-            switch(dag) {
+            cijfer = Integer.parseInt( s);
+            switch(cijfer) {
                 case 1:
-                    tekst = "zondag";
-                    break;
                 case 2:
-                    tekst = "maandag";
-                    break;
                 case 3:
-                    tekst = "dinsdag";
+                    tekst = "slecht";
                     break;
                 case 4:
-                    tekst = "woensdag";
+                    tekst = "onvoldoende";
                     break;
                 case 5:
-                    tekst = "donderdag";
+                    tekst = "matig";
                     break;
                 case 6:
-                    tekst = "vrijdag";
-                    break;
                 case 7:
-                    tekst = "zaterdag";
+                    tekst = "voldoende";
+                    break;
+                case 8:
+                case 9:
+                case 10:
+                    tekst = "goed";
                     break;
                 default:
-                    tekst = "U hebt een verkeerd nummer ingetikt ..!";
+                    tekst = "U hebt een verkeerd cijfer ingetikt";
                     break;
             }
             repaint();
